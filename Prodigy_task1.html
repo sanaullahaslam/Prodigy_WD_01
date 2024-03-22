@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>PRODIGY_WD_01</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            padding: 20px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        .section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        h1, h2 {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-        <header>
+    <header>
         <nav id="navbar">
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -35,7 +79,15 @@
         <h2>Contact Us</h2>
     </section>
 
-    <script src="script.js"></script>
-
+    <script>
+        window.addEventListener('scroll', function() {
+            var navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = '#555';
+            } else {
+                navbar.style.backgroundColor = '#333';
+            }
+        });
+    </script>
 </body>
 </html>
